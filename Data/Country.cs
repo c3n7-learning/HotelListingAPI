@@ -7,7 +7,7 @@ namespace HotelListing.Data
 {
     public class Country
     {
-        public int Id { get; set; }
+        public int Id { get; set; }  // prop
         public string Name { get; set; }
         public string ShortName { get; set; }
     }
