@@ -1,3 +1,4 @@
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ using Microsoft.OpenApi.Models;
 using HotelListing.Data;
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
+using HotelListing.Configurations;
 
 namespace HotelListing
 {
@@ -40,6 +42,8 @@ namespace HotelListing
                     AllowAnyMethod().
                     AllowAnyHeader());
             });
+
+            services.AddAutoMapper(typeof(MapperInitializer));
 
             services.AddSwaggerGen(c =>
             {
