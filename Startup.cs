@@ -38,6 +38,9 @@ namespace HotelListing
                 c.UseNpgsql(Configuration.GetConnectionString("sqlConnection"))
             );
 
+            services.AddAuthentication();
+            services.ConfigureIdentity();
+
             services.AddCors(c =>
             {
                 c.AddPolicy("AllowAllCors", builder =>
