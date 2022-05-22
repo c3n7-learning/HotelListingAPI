@@ -6,12 +6,10 @@ using HotelListing.Models;
 
 namespace HotelListing.Services
 {
+
     public interface IAuthManager
     {
-        public interface IAuthManager
-        {
-            Task<bool> ValidateUser(LoginUserDTO userDTO);
-            Task<bool> CreateToken();
-        }
+        Task<bool> ValidateUser(LoginUserDTO userDTO);
+        Task<string> CreateToken();
     }
 }
