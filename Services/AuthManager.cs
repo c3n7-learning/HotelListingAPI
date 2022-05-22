@@ -74,6 +74,7 @@ namespace HotelListing.Services
 
             var token = new JwtSecurityToken(
                 issuer: jwtSettings.GetSection("Issuer").Value,
+                // audience: jwtSettings.GetSection("Audience").Value,
                 claims: claims,
                 expires: expiration,
                 signingCredentials: signingCredentials
