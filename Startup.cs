@@ -18,6 +18,7 @@ using HotelListing.Configurations;
 using HotelListing.IRepository;
 using HotelListing.Repository;
 using Newtonsoft;
+using HotelListing.Services;
 
 namespace HotelListing
 {
@@ -53,6 +54,7 @@ namespace HotelListing
             services.AddAutoMapper(typeof(MapperInitializer));
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IAuthManager, AuthManager>();
 
             services.AddSwaggerGen(c =>
             {
